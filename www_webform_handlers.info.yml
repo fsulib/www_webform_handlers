@@ -1,0 +1,7 @@
+name: 'WWW Webform Handlers'
+type: module
+description: 'Provides webform handlers for the FSU Libraries website (www).'
+package: 'Other'
+core_version_requirements: ^8.8 || ^9
+dependencies:
+  - 'webfrm:webform'

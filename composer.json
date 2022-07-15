@@ -1,0 +1,17 @@
+{
+  "name": "fsulib/www_webform_handlers",
+  "description": "A module that provides webform handlers for the FSU Libraries website (www).",
+  "type": "drupal-custom-module",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://github.com/fsulib/www_webform_handlers",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Brian Arsenault",
+      "email": "barsenault@fsu.edu",
+      "role": "Maintainer"
+    }
+  ]
+}
