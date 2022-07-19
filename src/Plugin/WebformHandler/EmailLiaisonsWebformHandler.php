@@ -47,6 +47,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $configForm = parent::buildConfigurationForm($form, $form_state);
+    # override the 'To email' field
     $configForm['to']['to_mail'] = [];
     $configForm['to']['to_mail'] = [
       '#type' => 'details',
