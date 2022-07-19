@@ -1,0 +1,5 @@
+services:
+
+  www_webform_handlers.subject_liaisons:
+    class: Drupal\www_webform_handlers\SubjectLiaisonsService
+    arguments: ['@entity_type.manager']
