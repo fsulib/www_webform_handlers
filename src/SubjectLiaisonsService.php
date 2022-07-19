@@ -32,6 +32,7 @@ class SubjectLiaisonsService {
         array_push($emails, $email);
       }
     }
+
     return $emails;
   }
 }

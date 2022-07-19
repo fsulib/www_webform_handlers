@@ -2,6 +2,7 @@
 
 namespace Drupal\www_webform_handlers\Plugin\WebformHandler;
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\webform\Plugin\WebformHandler\EmailWebformHandler;
 use Drupal\webform\WebformSubmissionInterface;
 use Drupal\www_webform_handlers\SubjectLiaisonsService;
@@ -40,6 +41,22 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
     return $instance;
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
+    $configForm = parent::buildConfigurationForm($form, $form_state);
+    $configForm['to']['to_mail'] = [];
+    $configForm['to']['to_mail'] = [
+      '#type' => 'details',
+      '#title' => $this->t('To email'),
+      '#description' => $this->t('This is automatically set to the Subject Liaison email for the FSU Department selected on the form.')
+    ];
+
+    return $configForm;
+  }
+
 
   public function sendMessage(webformSubmissionInterface $webform_submission, array $message) {
     $submission_array = $webform_submission->getData();
